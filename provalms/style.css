@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+/* MENU */
+
+.menu {
+    background-color: rgb(0, 88, 204);
+    height: 50px;
+    justify-content: center;
+    text-decoration: none;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.btnEsquerda{
+    position: absolute;
+}
+
+.btnMeio{
+    position: absolute;
+    left: 160px
+}
+
+.btnDireita{
+    position: absolute;
+    left: 320px
+}
+
+.dropdown{
+    display: none;
+    position: relative;
+}
+
+.btnMeio:active .dropdown{
+    display: block;
+}
+
+.btnMenu{
+    display: inline-block;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 0px #00458e;
+    font-size: 20pt;
+    height: 43px;
+    width: 150px;
+    text-align: center;
+}
+
+
+.menu .btnMenu:hover{
+    background-color: #00458e;
+    box-shadow: 3px 7px 0px #001f41;
+}
+
+.btnDrop{
+    display: flex;
+    text-decoration: none;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 0px #00458e;
+    font-size: 20pt;
+    height: 43px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+/* MENU LATERAL */
+
+.menuEsquerdo{
+    margin-top: 50px;
+    position: absolute;
+    height: 1200px;
+    width: 20vw;
+    background-color: gray;
+}
+
+.menuEsquerdo button{
+    display: flex;
+    width: 100%;
+}
+
+button{
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 0px #00458e;
+    font-size: 20pt;
+    height: 43px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+button:hover {
+    background-color: #00458e;
+    box-shadow: 3px 7px 0px #001f41;
+}
+
+main{
+    height: 1200px;
+    width: 80vw;
+    background-color: rgb(157, 157, 157);
+    float: right;
+}
+
+main .conteudo {
+    padding-left: 50px;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width:600px) {
+    .menuEsquerdo{
+        position: absolute;
+        height: 1200px;
+        width: 100%;
+        background-color: gray;    
+    }    
+    main{
+        margin-top: 1200px;
+        height: 1200px;
+        width: 100vw;
+        background-color: blue;
+    }
+}
+
+/* LOADER */
+.loader {
+    width: 48px; /* LARGURA DO LOADER EM PX */
+    height: 48px; /* ALTURA DO LOADER EM PX */
+    border: 5px solid #FFF; /* BORDA DE 5PX SÓLIDA DE COR BRANCA DO LOADER */
+    border-bottom-color: transparent; /* BORDAR INFERIOR DE COR TRANSPARENT */
+    border-radius: 50%; /* ARREDONDAMENTO DA BORDA EM 50% EM RELAÇÃO AO SEU PRÓPRIO TAMANHO */
+    display: inline-block; /* DISPLAY CONFIGURADO EM BLOCO ALINHADO */
+    box-sizing: border-box; /* DEFINIÇÃO DO TIPO DE BORDA */
+    animation: rotation 1s linear infinite;  /* DEFINIÇÃO DE ANIMAÇÃO EM ROTAÇÃO A CADA 1 SEG DE FORMA LINEAR E INFINITA */
+}
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);  /* AO ESTÁ EM 0% DA ANIMAÇÃO DE ROTAÇÃO, ELE DEVE ESTÁ EM ROTAÇÃO DE 0 GRAUS */
+    }
+    100% {
+        transform: rotate(360deg);  /* AO ESTÁ EM 100% DA ANIMAÇÃO DE ROTAÇÃO, ELE DEVE ESTÁ EM ROTAÇÃO DE 360 GRAUS */
+    }
+} 
