@@ -85,7 +85,7 @@ body {
 
 .menuEsquerdo button{
     display: flex;
-    width: 100%;
+    width: 20vw;
 }
 
 button{
@@ -119,14 +119,39 @@ main .conteudo {
 /* RESPONSIVIDADE */
 
 @media screen and (max-width:600px) {
+    .btnMenu{
+        display: inline-block;
+        background-color: #007bff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 3px 7px 0px #00458e;
+        font-size: 20pt;
+        height: 43px;
+        width: 33%;
+        text-align: center;
+    }
+    .btnMeio{
+        position: absolute;
+        left: 33.5%;
+    }
+
+    .btnDireita{
+        position: absolute;
+        left: 67%;
+    }
     .menuEsquerdo{
         position: absolute;
-        height: 1200px;
-        width: 100%;
+        height: 200px;
+        width: 100vw;
         background-color: gray;    
-    }    
+    }
+    .menuEsquerdo button{
+        display: inline-block;
+        width: 40%;
+    }
     main{
-        margin-top: 1200px;
+        margin-top: 200px;
         height: 1200px;
         width: 100vw;
         background-color: blue;
@@ -137,11 +162,11 @@ main .conteudo {
 .loader {
     width: 48px; /* LARGURA DO LOADER EM PX */
     height: 48px; /* ALTURA DO LOADER EM PX */
-    border: 5px solid #FFF; /* BORDA DE 5PX SÓLIDA DE COR BRANCA DO LOADER */
-    border-bottom-color: transparent; /* BORDAR INFERIOR DE COR TRANSPARENT */
+    border: 5px solid #FFF; /* BORDA DE 5PX SÓLIDA(LINHA CONTÍNUA) DE COR BRANCA */
+    border-bottom-color: transparent; /* BORDAR INFERIOR DE COR TRANSPARENTE */
     border-radius: 50%; /* ARREDONDAMENTO DA BORDA EM 50% EM RELAÇÃO AO SEU PRÓPRIO TAMANHO */
-    display: inline-block; /* DISPLAY CONFIGURADO EM BLOCO ALINHADO */
-    box-sizing: border-box; /* DEFINIÇÃO DO TIPO DE BORDA */
+    display: inline-block; /* DISPLAY CONFIGURADO EM BLOCO EM LINHA */
+    box-sizing: border-box; /* DEFINIÇÃO DO TAMANHO QUE MESMO ADICIONANDO AS BORDAS, ELA MANTERÁ O TAMANHO GERAL DO LOADER EM 48x48 */
     animation: rotation 1s linear infinite;  /* DEFINIÇÃO DE ANIMAÇÃO EM ROTAÇÃO A CADA 1 SEG DE FORMA LINEAR E INFINITA */
 }
 
