@@ -158,6 +158,15 @@ main .conteudo {
     }
 }
 
+@media screen and (max-width:300px) {
+    .btnMenu{
+        font-size: 12pt;
+    }
+    .menuEsquerdo button{
+        font-size: 12pt;
+    }
+}
+
 /* LOADER */
 .loader {
     width: 48px; /* LARGURA DO LOADER EM PX */
